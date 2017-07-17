@@ -1,2 +1,2 @@
 # reactnews
-basic responsive react app to show news
+basic responsive react app
