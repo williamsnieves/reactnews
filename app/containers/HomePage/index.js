@@ -35,76 +35,87 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
   }
 
   render() {
-    const { loading, error, repos } = this.props;
-    const reposListProps = {
-      loading,
-      error,
-      repos,
-    };
+      const { loading, error, repos } = this.props;
+      const reposListProps = {
+          loading,
+          error,
+          repos,
+      };
 
-    if(this.props.news){
-        var imgTest = <img src={this.props.news[1].picture}/>
-    }
+      if (this.props.news) {
+          return (
+              <article >
+                  <section className="wrapper-grid">
+                      <div className="wrapper-welcome items">
+                          <div className="content-welcome">
+                              <h2>{this.props.news[0].title}</h2>
+                              <p>{this.props.news[0].content}</p>
+                          </div>
+                      </div>
 
-    return (
-      <article >
-          <section className="wrapper-grid">
-              <div className="wrapper-welcome">
-                  <div className="content-welcome">
-                      <h2>Welcome</h2>
-                      <p>test asasddasda asdasda sasdasda asdaad asda</p>
-                  </div>
-              </div>
+                      <div className="wrapper-groups items">
+                          <div><img src={this.props.news[1].picture} width="300" height="150" alt=""/></div>
+                          <div>{this.props.news[1].content}</div>
+                      </div>
 
-              <div className="wrapper-groups">
-                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
-                  <div>description</div>
-              </div>
+                      <div className="wrapper-groups-menu items">
+                          <div><img src={this.props.news[2].picture} alt="" width="300" height="150" /></div>
+                          <div className="wrapper-groups-menu-options wrapper-groups-menu-items">
+                              <div className="menu-options wrapper-groups-menu-items">about</div>
+                              <div className="menu-options wrapper-groups-menu-items">clients</div>
+                          </div>
+                      </div>
+                      <div className="wrapper-groups items">
+                          <div><img src={this.props.news[3].picture} alt="" width="300" height="150"/></div>
+                          <div>{this.props.news[3].content}</div>
+                      </div>
+                      <div className="wrapper-groups items">
+                          <div><img src={this.props.news[3].picture}  width="300" height="150" alt=""/></div>
+                          <div>{this.props.news[3].content}</div>
+                      </div>
 
-              <div className="wrapper-groups-menu">
-                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
-                  <div className="wrapper-groups-menu-options">
-                      <div className="menu-options">about</div>
-                      <div className="menu-options">clients</div>
-                  </div>
-              </div>
-              <div className="wrapper-groups">
-                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
-                  <div>mas descriptions</div>
-              </div>
-              <div className="wrapper-groups">
-                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
-                  <div>easport</div>
-              </div>
+                      <div className="wrapper-single items">
+                          <div className="menu-options-people">people</div>
+                      </div>
 
-              <div className="wrapper-single">
-                  <div className="menu-options-people">people</div>
-              </div>
+                      <div className="wrapper-photo items">
+                          <img src={this.props.news[1].picture} width="300" height="300" alt=""/>
+                      </div>
 
-              <div className="wrapper-photo">
-                  <img src="http://via.placeholder.com/300X300" alt=""/>
-              </div>
+                      <div className="wrapper-groups-big items">
+                          <div className="wrapper-groups-big-item">
+                              <div className="wrapper-groups-menu-items">
+                                  <img src={this.props.news[4].picture} width="300" height="150" alt=""/></div>
+                              <div className="wrapper-groups-menu-items">
+                                  <div className="menu-options-people">news</div>
+                              </div>
+                          </div>
+                          <div className="wrapper-groups-big-item">
+                              <div className="wrapper-groups-menu-items">
+                                  <div className="menu-options-people">people</div>
+                              </div>
+                              <div className="wrapper-groups-menu-items">
+                                  <img src={this.props.news[4].picture} width="300" height="150" alt=""/></div>
+                          </div>
+                      </div>
 
-              <div className="wrapper-groups-big">
-                  <div className="wrapper-groups-big-item">
-                      <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
-                      <div><div className="menu-options-people">news</div></div>
-                  </div>
-                  <div className="wrapper-groups-big-item">
-                      <div><div className="menu-options-people">people</div></div>
-                      <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
-                  </div>
-              </div>
-
-              <div className="wrapper-social">
-                  <div className="wrapper-social-icon">
-                      <img src="http://via.placeholder.com/20X20" alt=""/>
-                  </div>
-                  <p>asdsdsad asdasdada sdasdadasd asdsadd asds</p>
-              </div>
-          </section>
-      </article>
-    );
+                      <div className="wrapper-social items">
+                          <div className="wrapper-social-icon">
+                              <img src="http://via.placeholder.com/20X20" alt=""/>
+                          </div>
+                          <p>asdsdsad asdasdada sdasdadasd asdsadd asds</p>
+                      </div>
+                      <div className="wrapper-photo items">
+                          <img src="http://via.placeholder.com/300X300" alt=""/>
+                      </div>
+                  </section>
+              </article>
+          );
+      }else{
+          return (
+              <div>Loading...</div>
+          )
+      }
   }
 }
 

@@ -21,11 +21,14 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
   render() {
     return (
       <div>
-        <HeaderWrapper>
+        <HeaderWrapper className="header-wrapper">
             <A href="">
                 <Img src={Banner} alt="react-boilerplate - Logo"/>
             </A>
-            <NavBar>
+            <A>
+                <i className="fa fa-bars" aria-hidden="true"></i>
+            </A>
+            <NavBar className='main-menu'>
                 <HeaderLink to="/">
                     <FormattedMessage {...messages.home} />
                 </HeaderLink>
