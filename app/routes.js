@@ -39,8 +39,8 @@ export default function createRoutes(store) {
         importModules.catch(errorLoading);
       },
     }, {
-      path: '/features',
-      name: 'features',
+      path: '/about',
+      name: 'about',
       getComponent(nextState, cb) {
         import('containers/FeaturePage')
           .then(loadModule(cb))

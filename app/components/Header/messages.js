@@ -10,8 +10,24 @@ export default defineMessages({
     id: 'boilerplate.components.Header.home',
     defaultMessage: 'Home',
   },
-  features: {
-    id: 'boilerplate.components.Header.features',
-    defaultMessage: 'Features',
+  about: {
+    id: 'boilerplate.components.Header.about',
+    defaultMessage: 'About',
+  },
+  news: {
+    id: 'boilerplate.components.Header.news',
+    defaultMessage: 'News',
+  },
+  work: {
+    id: 'boilerplate.components.Header.work',
+    defaultMessage: 'Work',
+  },
+  clients: {
+    id: 'boilerplate.components.Header.clients',
+    defaultMessage: 'Clients',
+  },
+  contact: {
+    id: 'boilerplate.components.Header.contact',
+    defaultMessage: 'Contact',
   },
 });

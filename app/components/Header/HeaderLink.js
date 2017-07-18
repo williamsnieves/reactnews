@@ -2,24 +2,13 @@ import { Link } from 'react-router';
 import styled from 'styled-components';
 
 export default styled(Link)`
-  display: inline-flex;
-  padding: 0.25em 2em;
-  margin: 1em;
-  text-decoration: none;
-  border-radius: 4px;
-  -webkit-font-smoothing: antialiased;
-  -webkit-touch-callout: none;
-  user-select: none;
-  cursor: pointer;
-  outline: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  border: 2px solid #41ADDD;
-  color: #41ADDD;
-  
-  &:active {
-    background: #41ADDD;
-    color: #FFF;
-  }
+    margin: 0 0 0 1em;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    &:hover {
+        color: #000
+        border-bottom: 4px solid #fdeb6e
+    }
+
 `;

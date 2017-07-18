@@ -43,43 +43,73 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
 
     return (
       <article>
-        <Helmet
-          title="Home Page"
-          meta={[
-            { name: 'description', content: 'A React.js Boilerplate application homepage' },
-          ]}
-        />
         <div>
-          <CenteredSection>
-            <H2>
-              <FormattedMessage {...messages.startProjectHeader} />
-            </H2>
-            <p>
-              <FormattedMessage {...messages.startProjectMessage} />
-            </p>
-          </CenteredSection>
-          <Section>
-            <H2>
-              <FormattedMessage {...messages.trymeHeader} />
-            </H2>
-            <Form onSubmit={this.props.onSubmitForm}>
-              <label htmlFor="username">
-                <FormattedMessage {...messages.trymeMessage} />
-                <AtPrefix>
-                  <FormattedMessage {...messages.trymeAtPrefix} />
-                </AtPrefix>
-                <Input
-                  id="username"
-                  type="text"
-                  placeholder="mxstbr"
-                  value={this.props.username}
-                  onChange={this.props.onChangeUsername}
-                />
-              </label>
-            </Form>
-            <ReposList {...reposListProps} />
-          </Section>
+          <h1>Welcome</h1>
+          <p>personalasdaadasdad asdsaadada adsa </p>
         </div>
+
+        <div>
+          <div>
+            <img src="https://cdn.pixabay.com/photo/2017/06/22/11/54/town-2430571_960_720.jpg" alt=""/>
+            <p>atest</p>
+          </div>
+        </div>
+
+        <div>
+          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
+        </div>
+
+        <div>
+          about
+        </div>
+
+        <div>
+          clients
+        </div>
+
+        <div>
+          <div>
+            <img src="https://cdn.pixabay.com/photo/2017/06/22/11/54/town-2430571_960_720.jpg" alt=""/>
+            <p>atest</p>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <img src="https://cdn.pixabay.com/photo/2017/06/22/11/54/town-2430571_960_720.jpg" alt=""/>
+            <p>ea sport</p>
+          </div>
+        </div>
+
+        <div>
+          contact
+        </div>
+
+        <div>
+          <img src="" alt="twitter"/>
+          <p>
+            asdasdadadsd  asdadsadada asdasddada
+          </p>
+        </div>
+
+        <div>
+          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
+        </div>
+        <div>
+          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
+        </div>
+        <div>
+          news
+        </div>
+        <div>
+          people
+        </div>
+        <div>
+          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
+        </div>
+
+
+
       </article>
     );
   }

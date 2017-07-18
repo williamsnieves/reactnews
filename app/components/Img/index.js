@@ -8,8 +8,11 @@
 import React, { PropTypes } from 'react';
 
 function Img(props) {
+  const widthLogo = {
+    width: '100px'
+  }
   return (
-    <img className={props.className} src={props.src} alt={props.alt} />
+    <img style={widthLogo} className={props.className} src={props.src} alt={props.alt} />
   );
 }
 
