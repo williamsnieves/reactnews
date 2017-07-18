@@ -47,77 +47,62 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
     }
 
     return (
-      <article>
-        <div>
-            {imgTest}
-        </div>
-        <div>
-          <h1>Welcome</h1>
-          <p>personalasdaadasdad asdsaadada adsa </p>
-        </div>
+      <article >
+          <section className="wrapper-grid">
+              <div className="wrapper-welcome">
+                  <div className="content-welcome">
+                      <h2>Welcome</h2>
+                      <p>test asasddasda asdasda sasdasda asdaad asda</p>
+                  </div>
+              </div>
 
-        <div>
-          <div>
-            <img src="https://cdn.pixabay.com/photo/2017/06/22/11/54/town-2430571_960_720.jpg" alt=""/>
-            <p>atest</p>
-          </div>
-        </div>
+              <div className="wrapper-groups">
+                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
+                  <div>description</div>
+              </div>
 
-        <div>
-          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
-        </div>
+              <div className="wrapper-groups-menu">
+                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
+                  <div className="wrapper-groups-menu-options">
+                      <div className="menu-options">about</div>
+                      <div className="menu-options">clients</div>
+                  </div>
+              </div>
+              <div className="wrapper-groups">
+                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
+                  <div>mas descriptions</div>
+              </div>
+              <div className="wrapper-groups">
+                  <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
+                  <div>easport</div>
+              </div>
 
-        <div>
-          about
-        </div>
+              <div className="wrapper-single">
+                  <div className="menu-options-people">people</div>
+              </div>
 
-        <div>
-          clients
-        </div>
+              <div className="wrapper-photo">
+                  <img src="http://via.placeholder.com/300X300" alt=""/>
+              </div>
 
-        <div>
-          <div>
-            <img src="https://cdn.pixabay.com/photo/2017/06/22/11/54/town-2430571_960_720.jpg" alt=""/>
-            <p>atest</p>
-          </div>
-        </div>
+              <div className="wrapper-groups-big">
+                  <div className="wrapper-groups-big-item">
+                      <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
+                      <div><div className="menu-options-people">news</div></div>
+                  </div>
+                  <div className="wrapper-groups-big-item">
+                      <div><div className="menu-options-people">people</div></div>
+                      <div><img src="http://via.placeholder.com/300X150" alt=""/></div>
+                  </div>
+              </div>
 
-        <div>
-          <div>
-            <img src="https://cdn.pixabay.com/photo/2017/06/22/11/54/town-2430571_960_720.jpg" alt=""/>
-            <p>ea sport</p>
-          </div>
-        </div>
-
-        <div>
-          contact
-        </div>
-
-        <div>
-          <img src="" alt="twitter"/>
-          <p>
-            asdasdadadsd  asdadsadada asdasddada
-          </p>
-        </div>
-
-        <div>
-          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
-        </div>
-        <div>
-          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
-        </div>
-        <div>
-          news
-        </div>
-        <div>
-          people
-        </div>
-        <div>
-          <img src="https://cdn.pixabay.com/photo/2016/09/04/13/08/bread-1643951_960_720.jpg" alt="react-boilerplate - Logo"/>
-        </div>
-
-
-
+              <div className="wrapper-social">
+                  <div className="wrapper-social-icon">
+                      <img src="http://via.placeholder.com/20X20" alt=""/>
+                  </div>
+                  <p>asdsdsad asdasdada sdasdadasd asdsadd asds</p>
+              </div>
+          </section>
       </article>
     );
   }
