@@ -26,6 +26,12 @@ const makeSelectRepos = () => createSelector(
   (globalState) => globalState.getIn(['userData', 'repositories'])
 );
 
+
+const makeSelectNews = () => createSelector(
+    selectGlobal,
+    (globalState) => globalState.getIn(['news'])
+);
+
 const makeSelectLocationState = () => {
   let prevRoutingState;
   let prevRoutingStateJS;
@@ -49,4 +55,5 @@ export {
   makeSelectError,
   makeSelectRepos,
   makeSelectLocationState,
+  makeSelectNews
 };

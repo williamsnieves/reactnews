@@ -47,10 +47,10 @@ export function* getNews(){
 
   try {
     // Call our request helper (see 'utils/request')
-    const repos = yield call(request, requestURL);
-    yield put(reposLoaded(repos, username));
+    const news = yield call(request, requestURL);
+    yield put(newsLoaded(news));
   } catch (err) {
-    yield put(repoLoadingError(err));
+    yield put(newsLoadedError(err));
   }
 }
 

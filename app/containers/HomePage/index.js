@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import { makeSelectRepos, makeSelectLoading, makeSelectError } from 'containers/App/selectors';
+import { makeSelectRepos, makeSelectLoading, makeSelectError, makeSelectNews } from 'containers/App/selectors';
 import H2 from 'components/H2';
 import ReposList from 'components/ReposList';
 import AtPrefix from './AtPrefix';
@@ -19,8 +19,8 @@ import Form from './Form';
 import Input from './Input';
 import Section from './Section';
 import messages from './messages';
-import { loadRepos } from '../App/actions';
-import { changeUsername } from './actions';
+import { loadRepos, loadNews } from '../App/actions';
+import { changeUsername, getNewsFromApi } from './actions';
 import { makeSelectUsername } from './selectors';
 
 export class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -28,6 +28,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
    * when initial state username is not null, submit the form to load repos
    */
   componentDidMount(){
+    this.props.onInitNews()
     if (this.props.username && this.props.username.trim().length > 0) {
       this.props.onSubmitForm();
     }
@@ -41,10 +42,14 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
       repos,
     };
 
+    if(this.props.news){
+        var imgTest = <img src={this.props.news[1].picture}/>
+    }
+
     return (
       <article>
         <div>
-            {JSON.stringify(this.props)}
+            {imgTest}
         </div>
         <div>
           <h1>Welcome</h1>
@@ -130,7 +135,12 @@ HomePage.propTypes = {
   ]),
   onSubmitForm: React.PropTypes.func,
   username: React.PropTypes.string,
+  news: React.PropTypes.oneOfType([
+      React.PropTypes.array,
+      React.PropTypes.bool,
+  ]),
   onChangeUsername: React.PropTypes.func,
+  onNewsRequest: React.PropTypes.func,
 };
 
 export function mapDispatchToProps(dispatch) {
@@ -140,11 +150,19 @@ export function mapDispatchToProps(dispatch) {
       if (evt !== undefined && evt.preventDefault) evt.preventDefault();
       dispatch(loadRepos());
     },
+    onInitNews: (evt) => {
+        dispatch(loadNews())
+        //dispatch(loadNews());
+        //dispatch(getNewsFromApi());
+    }
+    //onNewsRequest: (evt) => dispatch(getNewsFromApi())
+    //dispatch(loadNews());
   };
 }
 
 const mapStateToProps = createStructuredSelector({
   repos: makeSelectRepos(),
+  news: makeSelectNews(),
   username: makeSelectUsername(),
   loading: makeSelectLoading(),
   error: makeSelectError(),
