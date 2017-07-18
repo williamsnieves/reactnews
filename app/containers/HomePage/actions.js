@@ -16,7 +16,7 @@
  */
 
 import {
-  CHANGE_USERNAME,
+  CHANGE_USERNAME, GET_NEWS
 } from './constants';
 
 /**
@@ -31,4 +31,10 @@ export function changeUsername(name) {
     type: CHANGE_USERNAME,
     name,
   };
+}
+
+export function getNewsFromApi(){
+  return {
+    type: GET_NEWS
+  }
 }

@@ -19,6 +19,9 @@ import {
   LOAD_REPOS,
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS_ERROR,
+  LOAD_NEWS,
+  LOAD_NEWS_ERROR,
+  LOAD_NEWS_SUCCESS
 } from './constants';
 
 /**
@@ -61,3 +64,26 @@ export function repoLoadingError(error) {
     error,
   };
 }
+
+/* Actions to get news */
+
+export function loadNews() {
+  return {
+    type: LOAD_NEWS,
+  };
+}
+
+export function newsLoaded(news) {
+  return {
+    type: LOAD_NEWS_SUCCESS,
+    news,
+  };
+}
+
+export function newsLoadedError(error) {
+  return {
+    type: LOAD_NEWS_ERROR,
+    error,
+  };
+}
+

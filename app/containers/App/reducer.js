@@ -16,6 +16,9 @@ import {
   LOAD_REPOS_SUCCESS,
   LOAD_REPOS,
   LOAD_REPOS_ERROR,
+  LOAD_NEWS,
+  LOAD_NEWS_ERROR,
+  LOAD_NEWS_SUCCESS
 } from './constants';
 
 // The initial state of the App
@@ -44,6 +47,19 @@ function appReducer(state = initialState, action) {
       return state
         .set('error', action.error)
         .set('loading', false);
+    case LOAD_NEWS:
+      return state
+          .set('loading', true)
+          .set('error', false)
+          .setIn(['news'], false);
+    case LOAD_NEWS_SUCCESS:
+      return state
+          .setIn(['news'], action.news)
+          .set('loading', false)
+    case LOAD_NEWS_ERROR:
+      return state
+          .set('error', action.error)
+          .set('loading', false);
     default:
       return state;
   }
